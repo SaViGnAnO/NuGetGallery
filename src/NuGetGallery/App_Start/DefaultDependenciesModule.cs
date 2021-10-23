@@ -952,7 +952,7 @@ namespace NuGetGallery
 
         private static DbConnection CreateDbConnection(ISqlConnectionFactory connectionFactory)
         {
-            return Task.Run(() => connectionFactory.CreateAsync()).Result;
+            return connectionFactory.CreateAsync().Result;
         }
 
         private static void ConfigureGalleryReadOnlyReplicaEntitiesContext(
