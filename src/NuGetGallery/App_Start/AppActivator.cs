@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Reflection;
 using System.Security.Claims;
 using System.Web.Helpers;
 using System.Web.Hosting;
@@ -29,6 +30,7 @@ using WebBackgrounder;
 [assembly: PreApplicationStartMethod(typeof(AppActivator), "PreStart")]
 [assembly: PostApplicationStartMethod(typeof(AppActivator), "PostStart")]
 [assembly: ApplicationShutdownMethod(typeof(AppActivator), "Stop")]
+[assembly: AssemblyVersionAttribute("1.0.0")]
 
 namespace NuGetGallery
 {

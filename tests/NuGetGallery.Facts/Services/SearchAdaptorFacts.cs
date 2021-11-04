@@ -431,7 +431,7 @@ namespace NuGetGallery
                     GetODataQuerySettingsForTest());
 
                 // Assert
-                Assert.Equal(new Uri("https://localhost:8081/api/v2/Search()?searchTerm='foo'&$orderby=Id&$skip=200&$top=1000"), nextLink);
+                Assert.Equal(new Uri("https://localhost:8081/api/v2/Search()?searchTerm=%27foo%27&$orderby=Id&$skip=200&$top=1000"), nextLink);
             }
 
             [Fact]
@@ -448,7 +448,7 @@ namespace NuGetGallery
                     SemVerLevelKey.SemVer2);
 
                 // Assert
-                Assert.Equal(new Uri("https://localhost:8081/api/v2/Search()?searchTerm='foo'&$orderby=Id&$skip=200&$top=1000&semVerLevel=2.0.0"), nextLink);
+                Assert.Equal(new Uri("https://localhost:8081/api/v2/Search()?searchTerm=%27foo%27&$orderby=Id&$skip=200&$top=1000&semVerLevel=2.0.0"), nextLink);
             }
         }
     }
